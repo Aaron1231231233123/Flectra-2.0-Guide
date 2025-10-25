@@ -1,9 +1,4 @@
-Got it — you want a **GitHub-ready** `README.md` version (fully formatted in Markdown, code-friendly, and clean), and you’re asking whether this setup connects to PostgreSQL in the same way as the remote configuration guide you linked.
 
-Here’s the full professional `README.md` that’s ready to upload to GitHub.
-After that, I’ll explain the PostgreSQL connection part clearly.
-
----
 
 ````markdown
 # Flectra 2.0 Installation Guide (Docker - Windows 10)
@@ -233,20 +228,6 @@ docker exec -t flectra-docker-db-1 pg_dumpall -c -U flectra > backup.sql
 
 ---
 
-## License
-
-This setup guide is for educational and development purposes.
-Refer to FlectraHQ’s official license for production use.
-
-```
-
----
-
-### Clarification on the PostgreSQL Connection
-The configuration you’re using **does connect similar to** the BigBinary guide, but within a **Docker internal network**, not from the outside.  
-
-- The `db` container is only accessible by the `flectra` container (through Docker’s virtual network).  
-- No manual `pg_hba.conf` or `postgresql.conf` changes are required unless you intend to connect from **outside** Docker (e.g., using pgAdmin or a remote app).  
 
 If you want, I can include a **remote connection example** (allowing `pgAdmin` or external clients to connect to the same database) — would you like me to add that to the README as an optional section?
 ```
